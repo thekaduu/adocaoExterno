@@ -1,0 +1,30 @@
+{
+  "name": "pas",
+  "version": "1.0.0",
+  "description": "Sistema de Adoção do Projeto Amar & Servir",
+  "main": "adocao.min.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Eduardo Lima Braz",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "angular-animate": "^1.6.1",
+    "angular-input-masks": "^2.5.0",
+    "animate.css": "^3.5.2",
+    "gulp": "^3.9.1"
+  }
+}

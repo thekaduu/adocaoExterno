@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Capriola|Mitr:300" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/dependencies.min.css" media="screen" title="no title" charset="utf-8">
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" charset="utf-8"></script>
+
+
+        <script src="min/scripts-dependency.min.js" charset="utf-8"></script>
+        <script src="min/controllers.min.js" charset="utf-8"></script>
+        <title>Amar & Servir - Adoção</title>
+    </head>
+    <body ng-app="externo">
+        <div class="wrap">
+            <div class="container-fluid" ng-controller="adocaoController as ctrl">
+                <div class="steps">
+                   <div style="margin:25px 0px">
+                     <ul>
+                         <li>
+                             <span class="tes">
+                                 <img src="img/icon-identification.png" alt="" class=" img-step animated" ng-class="{'step-inactive': ctrl.actual_content !== 1, 'zoomIn': ctrl.variable==1, 'bounce': ctrl.actual_content === 1}"  />
+
+                             </span>
+                        </li>
+                         <li>
+                             <img src="img/icon-contribuition.png" alt="" class=" img-step animated" ng-class="{'step-inactive': ctrl.actual_content !== 2, 'zoomIn': ctrl.variable==1, 'bounce': ctrl.actual_content === 2}"/>
+
+                         </li>
+                         <li>
+
+                             <img src="img/icon-home.png" alt="" class=" img-step animated" ng-class="{'step-inactive': ctrl.actual_content !== 3, 'zoomIn': ctrl.variable==1, 'bounce': ctrl.actual_content === 3}"/>
+
+                         </li>
+                     </ul>
+                   </div>
+                </div>
+
+                <div class="first content" ng-show="ctrl.actual_content === 1">
+                    <div id="first-animation" class="col-md-12 animated fadeInDown">
+                        <h1>Bem Vindo</h1>
+                        <small>
+                            Obrigado por querer colaborar com nosso projeto, sua ajuda é muito bem vinda.
+                        </small>
+                    </div>
+                    <div id="second-animation" class="animated fadeIn">
+                        <div class="col-sm-12">
+                            <div class="form-group fg-line">
+                                <label>CPF</label>
+                                <input type="text" autofocus class="form-control" ng-model="pctrl.Pf.Pessoa.cpf" ui-br-cpf-mask >
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="fg-line form-group">
+                                <label>Nome Completo</label>
+                                    <input type="text" class="form-control" placeholder="Nome Completo" ng-model="pctrl.Pf.Pessoa.nome">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group fg-line">
+                                 <label>Data Nascimento</label>
+                                <input type="text" class="form-control" ng-model="pctrl.Pf.Pessoa.data_nascimento" data-input-mask="{mask: '00/00/0000'}" placeholder="ex: 23/05/2014">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p style="margin-bottom: 0px;"><b>Sexo </b></p>
+                            <div class="col-sm-6">
+                                <div class="radio fg-line">
+                                    <label>
+                                        <input type="radio" ng-model="pctrl.Pf.Pessoa.sexo" value="M">
+                                        <i class="input-helper"></i>
+                                        Masculino
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="radio fg-line">
+                                    <label>
+                                        <input type="radio"  ng-model="pctrl.Pf.Pessoa.sexo" value="F">
+                                        <i class="input-helper"></i>
+                                        Feminino
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="second animated fadeInRight" ng-show="ctrl.actual_content === 2">
+                    <div id="third-animation" class="col-md-12">
+                        <h1>Forma de Colaborar</h1>
+                        <small>
+                            "(..)Não tenho prata nem ouro; mas o que tenho isso te dou(..) Atos 3:06
+
+                        </small>
+                    </div>
+                    <div id="four-animation">
+                        <div class="col-sm-12">
+                            <div class="form-group fg-line">
+                                <label>CPF</label>
+                                <input type="text" autofocus class="form-control" ng-model="pctrl.Pf.Pessoa.cpf" ui-br-cpf-mask >
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="fg-line form-group">
+                                <label>Nome Completo</label>
+                                    <input type="text" class="form-control" placeholder="Nome Completo" ng-model="pctrl.Pf.Pessoa.nome">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group fg-line">
+                                 <label>Data Nascimento</label>
+                                <input type="text" class="form-control" ng-model="pctrl.Pf.Pessoa.data_nascimento" data-input-mask="{mask: '00/00/0000'}" placeholder="ex: 23/05/2014">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p style="margin-bottom: 0px;"><b>Sexo </b></p>
+                            <div class="col-sm-6">
+                                <div class="radio fg-line">
+                                    <label>
+                                        <input type="radio" ng-model="pctrl.Pf.Pessoa.sexo" value="M">
+                                        <i class="input-helper"></i>
+                                        Masculino
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="radio fg-line">
+                                    <label>
+                                        <input type="radio"  ng-model="pctrl.Pf.Pessoa.sexo" value="F">
+                                        <i class="input-helper"></i>
+                                        Feminino
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="third animated fadeInRight" ng-show="ctrl.actual_content === 2">
+                    <div id="third-animation" class="col-md-12">
+                        <h1>Contato</h1>
+                        <small>
+                            Gostamos de informar ao nossos adotantes as maravílhas que Deus tem feito em nosso campo missionário
+
+                        </small>
+                    </div>
+                    <div id="four-animation">
+                        <div class="col-sm-12">
+                            <div class="form-group fg-line">
+                                <label>CPF</label>
+                                <input type="text" autofocus class="form-control" ng-model="pctrl.Pf.Pessoa.cpf" ui-br-cpf-mask >
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="fg-line form-group">
+                                <label>Nome Completo</label>
+                                    <input type="text" class="form-control" placeholder="Nome Completo" ng-model="pctrl.Pf.Pessoa.nome">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group fg-line">
+                                 <label>Data Nascimento</label>
+                                <input type="text" class="form-control" ng-model="pctrl.Pf.Pessoa.data_nascimento" data-input-mask="{mask: '00/00/0000'}" placeholder="ex: 23/05/2014">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p style="margin-bottom: 0px;"><b>Sexo </b></p>
+                            <div class="col-sm-6">
+                                <div class="radio fg-line">
+                                    <label>
+                                        <input type="radio" ng-model="pctrl.Pf.Pessoa.sexo" value="M">
+                                        <i class="input-helper"></i>
+                                        Masculino
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="radio fg-line">
+                                    <label>
+                                        <input type="radio"  ng-model="pctrl.Pf.Pessoa.sexo" value="F">
+                                        <i class="input-helper"></i>
+                                        Feminino
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <button type="button" ng-click="ctrl.next()" class="btn btn-primary pull-right" style="margin-right:60px" name="button">Prosseguir</button>
+
+
+            </div>
+        </div>
+    </body>
+</html>
