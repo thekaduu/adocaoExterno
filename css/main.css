@@ -31,7 +31,7 @@ html, body {
 
 }
 .ng-hide {
-    opacity: 0;
+    display: none;
     transform: translate3d(-2000px, 0, 0);
 }
 h1, h2, h3, h4 {
@@ -86,6 +86,30 @@ li{
 }
 
 #second-animation{
+    -webkit-animation-duration: 1.8s;
+    -webkit-animation-delay: 0.6s;
+
+    -moz-animation-duration: 1.8s;
+    -moz-animation-delay: 0.6s;
+
+    animation-duration: 1.8s;
+    animation-delay: 0.6s;
+}
+
+
+.img-button{
+    height: 300px;
+    margin:40px;
+    cursor: pointer;
+}
+.img-button:hover{
+    height: 320px;
+    transition: height 0.25s ease-in;
+}
+.checked{
+    height: 320px;
+    box-shadow: 0px 0px 7px #393939;
+
     -webkit-animation-duration: 1.8s;
     -webkit-animation-delay: 0.6s;
 

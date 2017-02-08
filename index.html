@@ -100,50 +100,33 @@
                         </small>
                     </div>
                     <div id="four-animation">
+                        <center style="margin-top:40px"><h3>Selecione a(s) forma(s) que deseja colaborar. -- {{ctrl.donation}}</h3></center>
                         <div class="col-sm-12">
-                            <div class="form-group fg-line">
-                                <label>CPF</label>
-                                <input type="text" autofocus class="form-control" ng-model="pctrl.Pf.Pessoa.cpf" ui-br-cpf-mask >
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="fg-line form-group">
-                                <label>Nome Completo</label>
-                                    <input type="text" class="form-control" placeholder="Nome Completo" ng-model="pctrl.Pf.Pessoa.nome">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group fg-line">
-                                 <label>Data Nascimento</label>
-                                <input type="text" class="form-control" ng-model="pctrl.Pf.Pessoa.data_nascimento" data-input-mask="{mask: '00/00/0000'}" placeholder="ex: 23/05/2014">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <p style="margin-bottom: 0px;"><b>Sexo </b></p>
-                            <div class="col-sm-6">
-                                <div class="radio fg-line">
-                                    <label>
-                                        <input type="radio" ng-model="pctrl.Pf.Pessoa.sexo" value="M">
-                                        <i class="input-helper"></i>
-                                        Masculino
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="radio fg-line">
-                                    <label>
-                                        <input type="radio"  ng-model="pctrl.Pf.Pessoa.sexo" value="F">
-                                        <i class="input-helper"></i>
-                                        Feminino
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                            <center>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <center><strong>OFERTANDO</strong></center>
+                                    <img src="img/donation_button.jpg" class="img-button" ng-class="{'checked': ctrl.donation}"  ng-click="ctrl.toCheck('donation')"    title="Ofertando" alt="" />
+                                    <center>Com seu dinheiro</center>
 
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <center><strong>ORANDO</strong></center>
+                                    <img src="img/praying_button.png" class="img-button"  ng-class="{'checked': ctrl.praying}" ng-click="ctrl.toCheck(2)"       title="Orando"  alt="" />
+                                    <center>Com suas orações</center>
+
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <center><strong>SERVINDO</strong></center>
+                                    <img src="img/working_button.jpg" class="img-button"  ng-class="{'checked': ctrl.working}" ng-click="ctrl.toCheck('working')"       title="Servindo"  alt="" />
+                                    <center>Com sua profissão</center>
+
+                                </div class="col-sm-3">
+                            </center>
+                        </div>
                     </div>
                 </div>
 
-                <div class="third animated fadeInRight" ng-show="ctrl.actual_content === 2">
+                <div class="third animated fadeInRight" ng-show="ctrl.actual_content === 3">
                     <div id="third-animation" class="col-md-12">
                         <h1>Contato</h1>
                         <small>
@@ -195,8 +178,10 @@
                     </div>
                 </div>
 
-
-                <button type="button" ng-click="ctrl.next()" class="btn btn-primary pull-right" style="margin-right:60px" name="button">Prosseguir</button>
+                <div class="row col-sm-12">
+                    <button type="button" ng-click="ctrl.previous()" class="btn btn-danger pull-left" style="margin-right:60px" name="button">Anterior</button>
+                    <button type="button" ng-click="ctrl.next()" class="btn btn-primary pull-right" style="margin-right:60px" name="button">Prosseguir</button>
+                </div>
 
 
             </div>
